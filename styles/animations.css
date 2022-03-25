@@ -1,3 +1,11 @@
+:root {
+  --img-top: 0px;
+  --img-left: 0px;
+  --img-width: 0px;
+  --img-height: 0px;
+}
+
+
 .menu.clicked {
   animation-name: menu-button;
   animation-duration: 1.5s;
@@ -81,5 +89,57 @@
   }
   100% {
     opacity: 100%;
+  }
+}
+
+
+.img.clicked {
+  animation-name: img;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+@keyframes img {
+  0% {
+    position: fixed;
+    top: var(--img-top);
+    left: var(--img-left);
+    width: var(--img-width);
+    height: var(--img-height);
+  }
+
+  100% {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+  }
+}
+.img.unclicked {
+  animation-name: img-reverse;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+@keyframes img-reverse {
+  0% {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+  }
+
+  99% {
+    position: fixed;
+    top: var(--img-top);
+    left: var(--img-left);
+    width: var(--img-width);
+    height: var(--img-height);
+  }
+
+  100% {
+    position: static;
   }
 }

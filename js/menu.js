@@ -1,8 +1,9 @@
 var menu = $('#menu')
 var counter = 0
+var clicked = false
 menu.bind('click', (e) => {
   if(e.target.nodeName.toLowerCase() == 'a') return;
-  console.log(menu[0])
+  clicked = !clicked
   if(!counter) { 
     toggleMenu(menu)
     menu.toggleClass('clicked')
@@ -27,7 +28,8 @@ const menuBtnTemplate = (name) => {
 const toggleMenu = (menu) => {
   if(!menu.hasClass('clicked'))
     setTimeout(() => {
-      showMenu()
+      if(clicked)
+        showMenu()
     }, 1400)
   else
     hideMenu()
