@@ -1,0 +1,68 @@
+:root {
+  --margin-top: 10px;
+}
+
+.main-container {
+  margin-top: var(--margin-top);
+  background-color: #e3e3e3;
+  border-radius: 10px;
+  padding: 1px 5px;
+}
+
+header {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 20px;
+  margin: 10px 0;
+  font-stretch: expanded;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  max-height: 1000px;
+  flex-wrap: wrap;
+}
+
+.gallery .img {
+  background-size: cover;
+  background-position: center center;
+  flex: 33%;
+  margin: 5px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  height: calc((100vmin/3));
+}
+
+.img:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 10px 1px black;
+}
+
+.img1 {
+  background-image: url('../images/1.jpg');
+}
+
+.img2 {
+  background-image: url('../images/2.jpg');
+}
+
+.img3 {
+  background-image: url('../images/3.jpg');
+}
+
+.img4 {
+  background-image: url('../images/4.jpg');
+}
+
+.img5 {
+  background-image: url('../images/5.jpg');
+}
+
+.img6 {
+  background-image: url('../images/6.jpg');
+}
+
+.img7 {
+  background-image: url('../images/7.jpg');
+}

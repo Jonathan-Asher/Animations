@@ -1,0 +1,85 @@
+.menu.clicked {
+  animation-name: menu-button;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+@keyframes menu-button {
+  0% {
+    top: 20px;
+  }
+  40% {
+    top: 0;
+    min-width: 0;
+    border-radius: 0px 7px 7px 0px;
+  }
+  100% {
+    top: 0;
+    min-width: 100%;
+    border-radius: 0;
+  }
+}
+.menu.clicked:hover {
+  opacity: 100%;
+}
+.menu.unclicked {
+  animation-name: menu-button-reverse;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+@keyframes menu-button-reverse {
+  0% {
+    top: 0px;
+    min-width: 100%;
+    border-radius: 0;
+  }
+  60% {
+    top: 0;
+    min-width: 0;
+    border-radius: 0px 7px 7px 0px;
+  }
+  100% {
+    top: 20px;
+    border-radius: 0px 7px 7px 0px;
+  }
+}
+
+
+.main-container.clicked {
+  animation-name: menu-body;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes menu-body {
+  0% {
+    margin-top: var(--margin-top);
+  }
+  100% {
+    margin-top: calc(var(--margin-top) + 48px);
+  }
+}
+.main-container.unclicked {
+  animation-name: menu-body-reverse;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+@keyframes menu-body-reverse {
+  0% {
+    margin-top: calc(var(--margin-top) + 48px);
+  }
+  100% {
+    margin-top: var(--margin-top);;
+  }
+}
+
+.menu-btn {
+  animation: menu-btn 0.5s;
+}
+@keyframes menu-btn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

@@ -1,0 +1,52 @@
+:root {
+  --main-color: #000;
+  --margin-top: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 22px;
+  border: 0;
+  border-radius: 7px;
+  transition-property: all;
+  transition-duration: 100ms;
+}
+
+.button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.button.menu {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  border-radius: 0px 7px 7px 0px;
+  text-align: center;
+}
+
+.menu-btn {
+  display: inline-block;
+  padding: 0.5px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.menu-btn:hover {
+  background-color: #3e3e3e;
+}
